@@ -26,7 +26,7 @@ public class TestSuite{
 	ArrayList<String> cards;
 	try {
 	  cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
-	  assertEquals(cards.size(), 13);
+	  assertEquals(cards.size(), 52);
 	} 
 	catch (IOException e) {
 	  fail("Read Failed: " + e);

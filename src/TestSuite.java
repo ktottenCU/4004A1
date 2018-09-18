@@ -15,4 +15,9 @@ public class TestSuite{
      
   }
   
+  @Test
+  public void testParser(){
+	  
+  }
+  
 }

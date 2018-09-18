@@ -10,18 +10,8 @@ import junit.*;
 public class TestSuite{
   
   @Test
-  public void testInitialCards() {
-     
-  }
-  
-  @Test
-  public void testAiInitialCards() {
-     
-  }
-  
-  @Test
   public void testParser(){
-	//Test to make sure the parser works
+  //Test to make sure the parser works
 	Parser parse = new Parser();
 	ArrayList<String> cards;
 	try {
@@ -30,9 +20,27 @@ public class TestSuite{
 	} 
 	catch (IOException e) {
 	  fail("Read Failed: " + e);
-	}
-	  
-	  	   
+	}	  	   
   }
+	
+  @Test
+  public void testInitialCards() {
+    //Tests to make sure proper cards grabbed
+	fail();
+  }
+  
+  @Test
+  public void testAiInitialCards() {
+    //Tests to make sure AI gets proper first cards  
+	fail();
+  }
+  
+  @Test
+  public void testAiSwapCards(){
+    //Tests tomake sure AI swaps cards properly
+	fail();
+  }
+  
+
   
 }

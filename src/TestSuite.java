@@ -1,5 +1,6 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.*;
@@ -20,10 +21,17 @@ public class TestSuite{
   
   @Test
   public void testParser(){
-	  //Test to make sure the parser works
-	  Parser parse = new Parser();
-	  ArrayList<String> cards = parse.getCards("cardfile");
+	//Test to make sure the parser works
+	Parser parse = new Parser();
+	ArrayList<String> cards;
+	try {
+	  cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
 	  assertEquals(cards.size(), 13);
+	} 
+	catch (IOException e) {
+	  fail("Read Failed: " + e);
+	}
+	  
 	  	   
   }
   

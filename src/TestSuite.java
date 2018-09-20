@@ -37,7 +37,7 @@ public class TestSuite{
   
   @Test
   public void testAiSwapCards(){
-    //Tests tomake sure AI swaps cards properly
+    //Tests to make sure AI swaps cards properly
 	fail();
   }
   

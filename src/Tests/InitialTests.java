@@ -10,22 +10,22 @@ import Poker.*;
 import junit.*;
 
 //Class for all the tests
-public class TestSuite{
+public class InitialTests{
   
   @Test
   public void testParser(){
   //Test to make sure the parser works
-	Parser parse = new Parser();
-	ArrayList<String> cards;
-	try {
-	  cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
-	  assertEquals(cards.size(), 52);
-	} 
-	catch (IOException e) {
-	  fail("Read Failed: " + e);
-	}	  	   
+    Parser parse = new Parser();
+    ArrayList<String> cards;
+    try {
+      cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
+      assertEquals(cards.size(), 52);
+    } 
+    catch (IOException e) {
+      fail("Read Failed: " + e);
+    }          
   }
-	
+    
   @Test
   public void testInitialCards() {
     //Tests to make sure proper cards grabbed for AI and Player hands
@@ -46,11 +46,7 @@ public class TestSuite{
   }
   
   
-  @Test
-  public void testAiSwapCards(){
-    //Tests to make sure AI swaps cards properly
-	fail();
-  }
+
   
 
   

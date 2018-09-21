@@ -1,3 +1,4 @@
+package Poker;
 ////////////////////
 //
 //Class for the Card Hand, stores 5 cards

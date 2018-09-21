@@ -1,9 +1,12 @@
+package Tests;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.*;
+
+import Poker.*;
 import junit.*;
 
 //Class for all the tests

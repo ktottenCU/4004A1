@@ -1,3 +1,4 @@
+package Poker;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -9,9 +10,9 @@ import java.util.ArrayList;
 
 
 public class PokerGame {
-  CardHand playerHand = new CardHand();
-  CardHand aiHand = new CardHand();
-  ArrayList<String> deck;
+  public CardHand playerHand = new CardHand();
+  public CardHand aiHand = new CardHand();
+  public ArrayList<String> deck;
   
   public PokerGame(String deckLocation){
     //Creating new poker game

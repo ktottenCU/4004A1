@@ -25,15 +25,23 @@ public class TestSuite{
 	
   @Test
   public void testInitialCards() {
-    //Tests to make sure proper cards grabbed
-	fail();
+    //Tests to make sure proper cards grabbed for AI and Player hands
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile");
+    assertEquals(testGame.aiHand.hand.size(), 5);
+    assertEquals(testGame.playerHand.hand.size(), 5);
+    assertEquals(testGame.playerHand.hand.get(0), "SA");
+    assertEquals(testGame.playerHand.hand.get(1), "S2");
+    assertEquals(testGame.playerHand.hand.get(2), "S3");
+    assertEquals(testGame.playerHand.hand.get(3), "S4");
+    assertEquals(testGame.playerHand.hand.get(4), "S5");
+    assertEquals(testGame.aiHand.hand.get(0), "S6");
+    assertEquals(testGame.aiHand.hand.get(1), "S7");
+    assertEquals(testGame.aiHand.hand.get(2), "S8");
+    assertEquals(testGame.aiHand.hand.get(3), "S9");
+    assertEquals(testGame.aiHand.hand.get(4), "S10");
+
   }
   
-  @Test
-  public void testAiInitialCards() {
-    //Tests to make sure AI gets proper first cards  
-	fail();
-  }
   
   @Test
   public void testAiSwapCards(){

@@ -7,9 +7,12 @@
 import java.util.ArrayList;
 
 public class CardHand {
-  ArrayList<String> hand = new ArrayList<String>();
+  public ArrayList<String> hand = new ArrayList<String>();
   
-  public CardHand(ArrayList<String> cards) {
-    this.hand = cards;
+  public CardHand() {
+  }
+  
+  public void addCard(String newCard) {
+    this.hand.add(newCard);
   }
 }

@@ -1,4 +1,9 @@
 package Tests;
+////////////////////
+//
+//Test for the AI behaviour and card swapping
+//
+////////////////////
 
 import static org.junit.Assert.fail;
 

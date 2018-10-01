@@ -14,13 +14,13 @@ public class PokerGame {
   public CardHand aiHand = new CardHand();
   public ArrayList<String> deck;
   
-  public PokerGame(String deckLocation){
+  public PokerGame(String deckLocation, int line){
     //Creating new poker game
     //First get cards, then get hand
-    Parser getCards = new Parser();
+    Parser theParser = new Parser();
     try {
       //Getting Cards from Parser
-      this.deck = getCards.getCards(deckLocation);
+      this.deck = theParser.getCards(deckLocation).get(line);
       //Create 2 hands from deck
       int i = 0;
       while (i<5) {

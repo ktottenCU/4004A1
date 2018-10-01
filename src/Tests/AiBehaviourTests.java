@@ -12,7 +12,13 @@ import org.junit.Test;
 public class AiBehaviourTests {
   
   @Test
-  public void testAiSwapCards(){
+  public void testSwapTwo(){
+    //Tests to make sure AI swaps cards properly
+    fail();
+  }
+  
+  @Test
+  public void testSwapOne(){
     //Tests to make sure AI swaps cards properly
     fail();
   }

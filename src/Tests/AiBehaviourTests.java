@@ -12,8 +12,9 @@ import org.junit.Test;
 public class AiBehaviourTests {
   
   @Test
-  public void testSwapTwo(){
-    //Tests to make sure AI swaps cards properly
+  public void testSwapNone() {
+    //Tests to make sure AI doesnt swap any cards
+    //happens if AI has a Full House, Straight, or Flush
     fail();
   }
   
@@ -22,4 +23,17 @@ public class AiBehaviourTests {
     //Tests to make sure AI swaps cards properly
     fail();
   }
+  
+  @Test
+  public void testSwapTwo(){
+    //Tests to make sure AI swaps cards properly
+    fail();
+  }
+  
+  @Test
+  public void testSwapThree() {
+    //Tests to make sure AI swaps cards properly
+    fail();
+  }
+  
 }

@@ -14,7 +14,8 @@ import Poker.*;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
   InitialTests.class,
-  AiBehaviourTests.class
+  AiBehaviourTests.class,
+  WinTests.class
 })
 
 public class AllTests {

@@ -26,6 +26,7 @@ public class InitialTests{
     try {
       cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
       assertEquals(cards.get(0).size(), 52);
+      assertEquals(cards.get(1).size(), 52);
     } 
     catch (IOException e) {
       fail("Read Failed: " + e);

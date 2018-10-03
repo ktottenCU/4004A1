@@ -37,7 +37,7 @@ public class AiBehaviourTests {
 	    ArrayList<String> pre = testGame.aiHand.hand;
 	    testGame.processBehaviour();
 	    ArrayList<String> post = testGame.aiHand.hand;
-		assertEquals((post.contains("S8") && post.contains("SA") && post.contains("SJ") && post.contains("S3")), true);
+		assertEquals((post.contains("S8") && post.contains("SA") && post.contains("S4") && post.contains("SJ") && post.contains("S3")), true);
 		
   }
   

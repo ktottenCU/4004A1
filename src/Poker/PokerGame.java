@@ -13,6 +13,7 @@ public class PokerGame {
   public CardHand opponentHand = new CardHand();
   public CardHand aiHand = new CardHand();
   public ArrayList<String> deck;
+  public AiController controller = new AiController();
   
   public PokerGame(String deckLocation, int line){
     //Creating new poker game

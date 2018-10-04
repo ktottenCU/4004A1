@@ -25,13 +25,13 @@ public class PokerGame {
       //Create 2 hands from deck
       int i = 0;
       while (i<5) {
-        aiHand.addCard(deck.get(0));
+        opponentHand.addCard(deck.get(0));
         deck.remove(0);
         i++;
       }
       i = 0;
       while (i<5) {
-        opponentHand.addCard(deck.get(0));
+        aiHand.addCard(deck.get(0));
         deck.remove(0);
         i++;
       }

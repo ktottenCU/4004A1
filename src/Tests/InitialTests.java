@@ -37,18 +37,18 @@ public class InitialTests{
   public void testInitialCards() {
     //Tests to make sure proper cards grabbed for AI and Player hands
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 0);
-    assertEquals(testGame.aiHand.hand.size(), 5);
-    assertEquals(testGame.aiHand.hand.size(), 5);
-    assertEquals(testGame.aiHand.hand.get(0), "SA");
-    assertEquals(testGame.aiHand.hand.get(1), "S2");
-    assertEquals(testGame.aiHand.hand.get(2), "S3");
-    assertEquals(testGame.aiHand.hand.get(3), "S4");
-    assertEquals(testGame.aiHand.hand.get(4), "S5");
-    assertEquals(testGame.opponentHand.hand.get(0), "S6");
-    assertEquals(testGame.opponentHand.hand.get(1), "S7");
-    assertEquals(testGame.opponentHand.hand.get(2), "S8");
-    assertEquals(testGame.opponentHand.hand.get(3), "S9");
-    assertEquals(testGame.opponentHand.hand.get(4), "S10");
+    assertEquals(testGame.opponentHand.hand.size(), 5);
+    assertEquals(testGame.opponentHand.hand.size(), 5);
+    assertEquals(testGame.opponentHand.hand.get(0), "SA");
+    assertEquals(testGame.opponentHand.hand.get(1), "S2");
+    assertEquals(testGame.opponentHand.hand.get(2), "S3");
+    assertEquals(testGame.opponentHand.hand.get(3), "S4");
+    assertEquals(testGame.opponentHand.hand.get(4), "S5");
+    assertEquals(testGame.aiHand.hand.get(0), "S6");
+    assertEquals(testGame.aiHand.hand.get(1), "S7");
+    assertEquals(testGame.aiHand.hand.get(2), "S8");
+    assertEquals(testGame.aiHand.hand.get(3), "S9");
+    assertEquals(testGame.aiHand.hand.get(4), "S10");
 
   }
   

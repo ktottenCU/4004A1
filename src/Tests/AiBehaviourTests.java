@@ -18,7 +18,7 @@ public class AiBehaviourTests {
   @Test
   public void testSwapNone() {
     //Tests to make sure AI doesnt swap any cards
-    //happens if AI has a Full House, Straight, or Flush
+    //happens if AI has: Royal Flush, Straight Flush, Four-of-a-Kind, Full House, Flush, Straight
 	PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
     ArrayList<String> pre = testGame.aiHand.hand;
     testGame.processBehaviour();

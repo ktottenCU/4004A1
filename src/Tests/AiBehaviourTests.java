@@ -19,6 +19,8 @@ public class AiBehaviourTests {
   public void testSwapNone() {
     //Tests to make sure AI doesnt swap any cards
     //happens if AI has: Royal Flush, Straight Flush, Four-of-a-Kind, Full House, Flush, Straight
+	//Need more swap tests: One for Royal, one for High and low straight (and straight flush), full house with all numbers(?), 4 of a kind for all numbers(?)
+	  
 	PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
     ArrayList<String> pre = testGame.aiHand.hand;
     testGame.processBehaviour();
@@ -33,12 +35,12 @@ public class AiBehaviourTests {
   @Test
   public void testSwapOne(){
     //Tests to make sure AI swaps cards properly
-	  PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
-	    ArrayList<String> pre = testGame.aiHand.hand;
-	    testGame.processBehaviour();
-	    ArrayList<String> post = testGame.aiHand.hand;
-		assertEquals((post.contains("S8") && post.contains("SA") && post.contains("S4") && post.contains("SJ") && post.contains("S3")), true);
-		
+	//Swapped if 1 away from flush, fullhouse, straight, straightflush, 4 of a kind (tho also check for full house)
+	PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
+	ArrayList<String> pre = testGame.aiHand.hand;
+	testGame.processBehaviour();
+	ArrayList<String> post = testGame.aiHand.hand;
+	assertEquals((post.contains("S8") && post.contains("SA") && post.contains("S4") && post.contains("SJ") && post.contains("S3")), true);
   }
   
   @Test
@@ -52,5 +54,4 @@ public class AiBehaviourTests {
     //Tests to make sure AI swaps cards properly
     fail();
   }
-  
 }

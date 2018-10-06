@@ -55,7 +55,18 @@ public class CardHand {
   
   //FLUSH
   public boolean hasFlush() {
-    return false;
+    //Checking for each card to start with the same suit
+    char suit = this.hand.get(0).charAt(0);
+    
+    
+    int i = 0;
+    while(i<5) {
+      if(this.hand.get(i).charAt(0) != suit) {
+        return false;
+      }
+      i++;
+    }
+    return true;
   }
   
   //STRAIGHT

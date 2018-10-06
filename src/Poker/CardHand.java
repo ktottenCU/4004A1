@@ -6,6 +6,8 @@ package Poker;
 ////////////////////
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class CardHand {
   public ArrayList<String> hand = new ArrayList<String>();
@@ -15,6 +17,41 @@ public class CardHand {
   
   public void addCard(String newCard) {
     this.hand.add(newCard);
+  }
+  
+  //Sorts card hand by values
+  public int[] sortHand() {
+    int[] values = new int[5];
+    String[] cards = new String[5];
+    //Values into array so sorting can happen
+    int i = 0;
+    while(i<5) {
+      if(this.hand.get(i).charAt(1) == 'K') {
+        values[i] = 13;  
+      }
+      else if (this.hand.get(i).charAt(1) == 'Q') {
+        values[i] = 12;
+      }
+      else if (this.hand.get(i).charAt(1) == 'J') {
+        values[i] = 11;
+      }
+      else if (this.hand.get(i).charAt(1) == 'A') {
+        values[i] = 14;
+      }
+      else if (this.hand.get(i).length() == 3) {
+        values[i] = 10;
+      }
+      else {
+        values[i] = Character.getNumericValue(this.hand.get(i).charAt(1));
+      }
+      cards[i] = this.hand.get(i);
+      i++;
+    }
+    
+    //With card values in the array, the array can now be sorted. Make sure to flip the original cards as well to keep track; 
+    Arrays.sort(values);
+    return values;
+    
   }
   
   //FUNCTIONS TO CHECK CERTAIN ITEMS IN THE HAND
@@ -68,7 +105,16 @@ public class CardHand {
   
   //FULL HOUSE
   public boolean hasFullHouse() {
-    return false;
+    int[] check = this.sortHand();
+    if((check[0] == check[1] && check[0] == check[2]) && (check[3] == check[4])) {
+      return true;
+    }
+    else if((check[4] == check[3] && check[4] == check[2]) && (check[0] == check[1])) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   
   //FLUSH

@@ -13,62 +13,32 @@ public class SwapZeroTests {
   //Detecting Royal Flush, Straight Flush, Four of a Kind, Full House, Flush and Straight
   
   @Test
-  public void inOrderRoyalFlushTest() {
+  public void RoyalFlushTest() {
     fail();
   }
   
   @Test
-  public void outOrderRoyalFlushTest() {
+  public void StraightFlushTest() {
     fail();
   }
   
   @Test
-  public void inOrderStraightFlushTest() {
+  public void FourKindTest() {
     fail();
   }
   
   @Test
-  public void outOrderStraightFlushTest() {
+  public void FullHouseTest() {
     fail();
   }
   
   @Test
-  public void inOrderFourKindTest() {
+  public void FlushTest() {
     fail();
   }
   
   @Test
-  public void outOrderFourKindTest() {
-    fail();
-  }
-  
-  @Test
-  public void inOrderFullHouseTest() {
-    fail();
-  }
-  
-  @Test
-  public void outOrderFullHouseTest() {
-    fail();
-  }
-  
-  @Test
-  public void inOrderFlushTest() {
-    fail();
-  }
-  
-  @Test
-  public void outOrderFlushTest() {
-    fail();
-  }
-  
-  @Test
-  public void inOrderStraightTest() {
-    fail();
-  }
-  
-  @Test
-  public void outOrderStraightTest() {
+  public void StraightTest() {
     fail();
   }
 }

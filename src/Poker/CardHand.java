@@ -77,7 +77,12 @@ public class CardHand {
   
   //STRAIGHT FLUSH
   public boolean hasStraightFlush() {
-    return false;
+    if(this.hasFlush() && this.hasStraight()) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   
   //FOUR OF A KIND

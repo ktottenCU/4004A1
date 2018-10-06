@@ -38,4 +38,29 @@ public class CardHand {
     }
   }
   
+  //STRAIGHT FLUSH
+  public boolean hasStraightFlush() {
+    return false;
+  }
+  
+  //FOUR OF A KIND
+  public boolean hasFourOfAKind() {
+    return false;
+  }
+  
+  //FULL HOUSE
+  public boolean hasFullHouse() {
+    return false;
+  }
+  
+  //FLUSH
+  public boolean hasFlush() {
+    return false;
+  }
+  
+  //STRAIGHT
+  public boolean hasStraight() {
+    return false;
+  }
+  
 }

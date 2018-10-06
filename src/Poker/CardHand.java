@@ -45,7 +45,25 @@ public class CardHand {
   
   //FOUR OF A KIND
   public boolean hasFourOfAKind() {
-    return false;
+    //Checking if there is a value
+    if((this.hand.get(0).charAt(1) == this.hand.get(1).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(2).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(3).charAt(1))) {
+      return true;
+    }
+    else if((this.hand.get(0).charAt(1) == this.hand.get(1).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(2).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(4).charAt(1))) {
+      return true;
+    }
+    else if((this.hand.get(0).charAt(1) == this.hand.get(1).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(3).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(4).charAt(1))) {
+      return true;
+    }
+    else if((this.hand.get(0).charAt(1) == this.hand.get(2).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(3).charAt(1)) && (this.hand.get(0).charAt(1) == this.hand.get(4).charAt(1))) {
+      return true;
+    }
+    else if((this.hand.get(1).charAt(1) == this.hand.get(2).charAt(1)) && (this.hand.get(1).charAt(1) == this.hand.get(3).charAt(1)) && (this.hand.get(1).charAt(1) == this.hand.get(4).charAt(1))) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   
   //FULL HOUSE

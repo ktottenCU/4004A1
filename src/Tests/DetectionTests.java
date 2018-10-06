@@ -50,12 +50,14 @@ public class DetectionTests {
   
   @Test
   public void inOrderFullHouseTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
+    assertEquals(testGame.aiHand.hasFullHouse(), true);
   }
   
   @Test
   public void outOrderFullHouseTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
+    assertEquals(testGame.aiHand.hasFullHouse(), true);
   }
   
   @Test

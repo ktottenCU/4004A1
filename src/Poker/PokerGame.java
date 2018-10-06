@@ -43,7 +43,12 @@ public class PokerGame {
   
   public void processBehaviour(){
 	//processes the AIP's behaviour
-	
+	//If structure to check if hand contains certain stuff
+    if(aiHand.hasRoyalFlush()) {
+      //Royal Flush
+      System.out.println("Royal Flush");
+      return;
+    }
   }
   
 }

@@ -3,6 +3,6 @@ Repo for Assignment 1 for COMP4004
 
 
 Cardfile notes:
-Line 1: in order
-Line 2: 1-off flush, should grab card (will make flush) (AIP win)
-Line 3: Flush + nothing (AIP win)
+Line 1: Deck, in order. Ace, 2, 3... of Spades, Hearts, Diamonds, Clubs.
+Line 2: AIP Royal Flush, in order
+Line 3: AIP Royal Flush, out of order

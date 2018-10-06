@@ -38,12 +38,14 @@ public class DetectionTests {
   
   @Test
   public void inOrderFourKindTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasFourOfAKind(), true);
   }
   
   @Test
   public void outOrderFourKindTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasFourOfAKind(), true);
   }
   
   @Test

@@ -28,12 +28,14 @@ public class DetectionTests {
   
   @Test
   public void inOrderStraightFlushTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
+    assertEquals(testGame.aiHand.hasStraightFlush(), true);
   }
   
   @Test
   public void outOrderStraightFlushTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
+    assertEquals(testGame.aiHand.hasStraightFlush(), true);
   }
   
   @Test

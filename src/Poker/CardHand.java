@@ -141,8 +141,10 @@ public class CardHand {
   //STRAIGHT
   public boolean hasStraight() {
     int[] check = this.sortHand();
+    
     //Deal with Aces
     if(this.hand.contains("SA") || this.hand.contains("HA") || this.hand.contains("DA") || this.hand.contains("CA")) {
+
       //Ace-High
       if(check[0] == 10 && check[1] == 11 && check[2] == 12 && check[3] == 13 && check[4] == 14) {
         return true;
@@ -158,7 +160,7 @@ public class CardHand {
     }
     //Deal without aces
     else {
-      if((check[0] == (check[1] + 1)) && (check[1] == (check[2] + 1)) && (check[2] == (check[3] + 1)) && (check[3] == (check[4] + 1))) {
+      if((check[0] == (check[1] - 1)) && (check[1] == (check[2] - 1)) && (check[2] == (check[3] - 1)) && (check[3] == (check[4] - 1))) {
         return true;
       }
       else {

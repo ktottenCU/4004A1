@@ -14,6 +14,7 @@ import Poker.PokerGame;
 
 public class DetectionTests {
 
+  //AI Hand Tests
   
   @Test
   public void inOrderRoyalFlushTest() {
@@ -30,7 +31,7 @@ public class DetectionTests {
   @Test
   public void failRoyalFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
-    assertEquals(testGame.aiHand.hasRoyalFlush(), true);
+    assertEquals(testGame.aiHand.hasRoyalFlush(), false);
   }
   
   @Test
@@ -48,7 +49,7 @@ public class DetectionTests {
   @Test
   public void failStraightFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
-    assertEquals(testGame.aiHand.hasStraightFlush(), true);
+    assertEquals(testGame.aiHand.hasStraightFlush(), false);
   }
   
   @Test
@@ -66,7 +67,7 @@ public class DetectionTests {
   @Test
   public void failFourKindTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
-    assertEquals(testGame.aiHand.hasFourOfAKind(), true);
+    assertEquals(testGame.aiHand.hasFourOfAKind(), false);
   }
   
   @Test
@@ -84,7 +85,7 @@ public class DetectionTests {
   @Test
   public void failFullHouseTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
-    assertEquals(testGame.aiHand.hasFullHouse(), true);
+    assertEquals(testGame.aiHand.hasFullHouse(), false);
   }
   
   @Test
@@ -102,7 +103,7 @@ public class DetectionTests {
   @Test
   public void failFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
-    assertEquals(testGame.aiHand.hasFlush(), true);
+    assertEquals(testGame.aiHand.hasFlush(), false);
   }
   
   @Test
@@ -120,7 +121,31 @@ public class DetectionTests {
   @Test
   public void failStraightTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
+    assertEquals(testGame.aiHand.hasStraight(), false);
+  }
+  
+  //Independence Tests for hands
+  
+  @Test
+  public void bothStraightTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 0);
     assertEquals(testGame.aiHand.hasStraight(), true);
+    assertEquals(testGame.opponentHand.hasStraight(), true);
+
+  }
+  
+  @Test
+  public void neitherStraightTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasStraight(), false);
+    assertEquals(testGame.opponentHand.hasStraight(), false);
+  }
+  
+  @Test
+  public void oppStraightAiNoTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 5);
+    assertEquals(testGame.aiHand.hasStraight(), false);
+    assertEquals(testGame.opponentHand.hasStraight(), true);
   }
   
 }

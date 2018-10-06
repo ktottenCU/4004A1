@@ -7,4 +7,9 @@ package Poker;
 
 public class AiController {
 
+  public boolean requiredSwap(CardHand cards){
+	  
+	  return false;
+  }
+	
 }

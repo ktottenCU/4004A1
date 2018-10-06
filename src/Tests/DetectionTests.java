@@ -74,12 +74,14 @@ public class DetectionTests {
   
   @Test
   public void inOrderStraightTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
+    assertEquals(testGame.aiHand.hasStraight(), true);
   }
   
   @Test
   public void outOrderStraightTest() {
-    fail();
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
+    assertEquals(testGame.aiHand.hasStraight(), true);
   }
   
 }

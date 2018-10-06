@@ -14,6 +14,7 @@ import Poker.PokerGame;
 
 public class DetectionTests {
 
+  
   @Test
   public void inOrderRoyalFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
@@ -23,6 +24,12 @@ public class DetectionTests {
   @Test
   public void outOrderRoyalFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
+    assertEquals(testGame.aiHand.hasRoyalFlush(), true);
+  }
+  
+  @Test
+  public void failRoyalFlushTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
     assertEquals(testGame.aiHand.hasRoyalFlush(), true);
   }
   
@@ -39,6 +46,12 @@ public class DetectionTests {
   }
   
   @Test
+  public void failStraightFlushTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasStraightFlush(), true);
+  }
+  
+  @Test
   public void inOrderFourKindTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
     assertEquals(testGame.aiHand.hasFourOfAKind(), true);
@@ -47,6 +60,12 @@ public class DetectionTests {
   @Test
   public void outOrderFourKindTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasFourOfAKind(), true);
+  }
+  
+  @Test
+  public void failFourKindTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
     assertEquals(testGame.aiHand.hasFourOfAKind(), true);
   }
   
@@ -63,6 +82,12 @@ public class DetectionTests {
   }
   
   @Test
+  public void failFullHouseTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
+    assertEquals(testGame.aiHand.hasFullHouse(), true);
+  }
+  
+  @Test
   public void inOrderFlushTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
     assertEquals(testGame.aiHand.hasFlush(), true);
@@ -75,6 +100,12 @@ public class DetectionTests {
   }
   
   @Test
+  public void failFlushTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
+    assertEquals(testGame.aiHand.hasFlush(), true);
+  }
+  
+  @Test
   public void inOrderStraightTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 1);
     assertEquals(testGame.aiHand.hasStraight(), true);
@@ -83,6 +114,12 @@ public class DetectionTests {
   @Test
   public void outOrderStraightTest() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 2);
+    assertEquals(testGame.aiHand.hasStraight(), true);
+  }
+  
+  @Test
+  public void failStraightTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 4);
     assertEquals(testGame.aiHand.hasStraight(), true);
   }
   

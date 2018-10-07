@@ -73,7 +73,9 @@ public class PokerGame {
       System.out.println("Straight - Stay");
       return;
     }
+    //None of the majour hands
     else {
+      //Another if structure here for 1-swap hands
       return;
     }
   }

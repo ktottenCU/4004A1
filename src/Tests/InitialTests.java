@@ -38,7 +38,7 @@ public class InitialTests{
     //Tests to make sure proper cards grabbed for AI and Player hands
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 0);
     assertEquals(testGame.opponentHand.hand.size(), 5);
-    assertEquals(testGame.opponentHand.hand.size(), 5);
+    assertEquals(testGame.aiHand.hand.size(), 5);
     assertEquals(testGame.opponentHand.hand.get(0), "SA");
     assertEquals(testGame.opponentHand.hand.get(1), "S2");
     assertEquals(testGame.opponentHand.hand.get(2), "S3");

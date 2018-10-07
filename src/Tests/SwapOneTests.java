@@ -16,7 +16,7 @@ public class SwapOneTests {
 
   @Test
   public void royalFlushOneSwapTest() {
-    
+    fail();
   }
   
   @Test
@@ -37,12 +37,12 @@ public class SwapOneTests {
   
   @Test
   public void fullHouseOneSwapTest() {
-    
+    fail();
   }
   
   @Test
   public void fourKindOneSwapTest() {
-    
+    fail();
   }
   
   @Test
@@ -63,7 +63,7 @@ public class SwapOneTests {
   
   @Test
   public void straightOneSwapTest() {
-    
+    fail();
   }
   
 }

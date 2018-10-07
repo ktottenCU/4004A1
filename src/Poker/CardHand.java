@@ -203,4 +203,9 @@ public class CardHand {
     }
   }
   
+  //PAIR
+  public boolean hasPair() {
+    return false;
+  }
+  
 }

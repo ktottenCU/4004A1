@@ -54,6 +54,31 @@ public class CardHand {
     
   }
   
+  //Sorts hand by suit, with spades being a 4 and clubs being a 1 (so spades is highest)
+  public int[] sortSuits() {
+    int[] values = new int[5];
+    
+    int i = 0;
+    while(i<5) {
+      if(this.hand.get(i).charAt(0) == 'S') {
+        values[i] = 4;
+      }
+      else if(this.hand.get(i).charAt(0) == 'H') {
+        values[i] = 3;
+      }
+      else if(this.hand.get(i).charAt(0) == 'D') {
+        values[i] = 2;
+      }
+      else {
+        values[i] = 1;
+      }
+      i++;
+    }
+    
+    Arrays.sort(values);
+    return values;
+  }
+  
   //FUNCTIONS TO CHECK CERTAIN ITEMS IN THE HAND
   
   //ROYAL FLUSH CHECK

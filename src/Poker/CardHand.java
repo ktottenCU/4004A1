@@ -19,6 +19,10 @@ public class CardHand {
     this.hand.add(newCard);
   }
   
+  public void removeCard(String card) {
+    this.hand.remove(this.hand.indexOf(card));
+  }
+  
   //Sorts card hand by values
   public int[] sortHand() {
     int[] values = new int[5];
@@ -237,6 +241,85 @@ public class CardHand {
     else {
       return false;
     }
+  }
+  
+  //Checking One-Offs
+  public int oneOffRoyalFlush() {
+    return (-1);
+  }
+  
+  public int oneOffStraightFlush() {
+    return (-1);
+  }
+  
+  public int oneOffFourKind() {
+    return (-1);
+  }
+  
+  public int oneOffFullHouse() {
+    return (-1);
+  }
+  
+  public int oneOffFlush() {
+    int[] suits = this.sortSuits();
+    //Different suit is last
+    if(suits[0] == suits[1] && suits[0] == suits[2] && suits[0] == suits[3] && suits[0] != suits[4]) {
+      int check = suits[4];
+      char search;
+      if(check == 4) {
+        search = 'S'; 
+      }
+      else if (check ==3) {
+        search = 'H';
+      }
+      else if (check ==2) {
+        search = 'D';
+      }
+      else {
+        search = 'C';
+      }
+      int i = 0;
+      while(i<5) {
+        if(this.hand.get(i).charAt(0) == search) {
+          return i;
+        }
+        i++;
+      }
+      return (-1);
+    }
+    //Different suit first
+    else if(suits[4] == suits[1] && suits[4] == suits[2] && suits[4] == suits[3] && suits[4] != suits[0]) {
+      int check = suits[0];
+      char search;
+      if(check == 4) {
+        search = 'S'; 
+      }
+      else if (check ==3) {
+        search = 'H';
+      }
+      else if (check ==2) {
+        search = 'D';
+      }
+      else {
+        search = 'C';
+      }
+      int i = 0;
+      while(i<5) {
+        if(this.hand.get(i).charAt(0) == search) {
+          return i;
+        }
+        i++;
+      }
+      return (-1);
+    }
+    //Not one-off flush
+    else {
+      return (-1);
+    }
+  }
+  
+  public int oneOffStraight() {
+    return (-1);
   }
   
 }

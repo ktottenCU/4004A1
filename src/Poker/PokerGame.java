@@ -75,7 +75,39 @@ public class PokerGame {
     }
     //None of the majour hands
     else {
-      //Another if structure here for 1-swap hands
+      //Another if structure here for 1-swap hands, all of these should swap 1 card
+      //The functions return either -1 for "not this issue", or the index that needs be swapped
+      //Royal Flush
+      if(aiHand.oneOffRoyalFlush() != (-1)) {
+        
+      }
+      //Straight Flush
+      else if(aiHand.oneOffStraightFlush() != (-1)) {
+        
+      }
+      //Four of a Kind
+      else if(aiHand.oneOffFourKind() != (-1)) {
+        
+      }
+      //Full House
+      else if(aiHand.oneOffFullHouse() != (-1)) {
+        
+      }
+      //Flush
+      else if(aiHand.oneOffFlush() != (-1)) {
+        aiHand.removeCard(aiHand.hand.get(aiHand.oneOffFlush()));
+        aiHand.addCard(deck.get(0));
+        deck.remove(0);
+      }
+      //Straight
+      else if(aiHand.oneOffStraight() != (-1)) {
+        
+      }
+      //Not one-away
+      else {
+        
+      }
+      
       return;
     }
   }

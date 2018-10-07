@@ -85,14 +85,6 @@ public class PokerGame {
       else if(aiHand.oneOffStraightFlush() != (-1)) {
         
       }
-      //Four of a Kind
-      else if(aiHand.oneOffFourKind() != (-1)) {
-        
-      }
-      //Full House
-      else if(aiHand.oneOffFullHouse() != (-1)) {
-        
-      }
       //Flush
       else if(aiHand.oneOffFlush() != (-1)) {
         aiHand.removeCard(aiHand.hand.get(aiHand.oneOffFlush()));

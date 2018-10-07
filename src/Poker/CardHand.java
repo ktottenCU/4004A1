@@ -252,14 +252,6 @@ public class CardHand {
     return (-1);
   }
   
-  public int oneOffFourKind() {
-    return (-1);
-  }
-  
-  public int oneOffFullHouse() {
-    return (-1);
-  }
-  
   public int oneOffFlush() {
     int[] suits = this.sortSuits();
     //Different suit is last

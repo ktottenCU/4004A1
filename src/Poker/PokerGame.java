@@ -39,6 +39,10 @@ public class PokerGame {
       //Error
       System.out.println("CANNOT GET DECK, UNABLE TO PLAY POKER WITHOUT CARDS!");
     } 
+    
+    //Printing out the first set of cards
+    System.out.println("OPPONENT'S CARDS: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+    System.out.println("AIP'S CARDS: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
   }
   
   public void processBehaviour(){

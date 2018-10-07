@@ -205,7 +205,13 @@ public class CardHand {
   
   //PAIR
   public boolean hasPair() {
-    return false;
+    int[] check = this.sortHand();
+    if(check[0] == check[1] || check[1] == check[2] || check[2] == check[3] || check[3] == check[4]) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   
 }

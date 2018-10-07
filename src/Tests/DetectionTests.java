@@ -124,6 +124,18 @@ public class DetectionTests {
     assertEquals(testGame.aiHand.hasStraight(), false);
   }
   
+  @Test
+  public void threeKindTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    assertEquals(testGame.aiHand.hasThreeKind(), true);
+  }
+  
+  @Test
+  public void twoPairTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 6);
+    assertEquals(testGame.aiHand.hasTwoPair(), true);
+  }
+  
   //Independence Tests for hands
   
   @Test

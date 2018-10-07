@@ -169,4 +169,14 @@ public class CardHand {
     }
   }
   
+  //THREE OF A KIND
+  public boolean hasThreeKind() {
+    return false;
+  }
+  
+  //TWO PAIR
+  public boolean hasTwoPair() {
+    return false;
+  }
+  
 }

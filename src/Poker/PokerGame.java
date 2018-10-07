@@ -41,6 +41,7 @@ public class PokerGame {
     } 
     
     //Printing out the first set of cards
+    System.out.println("----- NEW POKER GAME! -----");
     System.out.println("OPPONENT'S CARDS: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
     System.out.println("AIP'S CARDS: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
   }

@@ -51,4 +51,12 @@ public class SwapOneTests {
     assertEquals(testGame.aiHand.hasStraight(), true);
   }
   
+  @Test
+  public void twoPairOneSwapTest() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 6);
+    assertEquals(testGame.aiHand.hasTwoPair(), true);
+    testGame.processBehaviour();
+    assertEquals(testGame.aiHand.hasFullHouse(), true);
+  }
+  
 }

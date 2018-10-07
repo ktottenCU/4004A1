@@ -50,7 +50,30 @@ public class PokerGame {
 	//If structure to check if hand contains certain stuff
     if(aiHand.hasRoyalFlush()) {
       //Royal Flush
-      System.out.println("Royal Flush");
+      System.out.println("Royal Flush - Stay");
+      return;
+    }
+    else if(aiHand.hasStraightFlush()) {
+      System.out.println("Straight Flush - Stay");
+      return;
+    }
+    else if(aiHand.hasFourOfAKind()) {
+      System.out.println("Four of a Kind - Stay");
+      return;
+    }
+    else if(aiHand.hasFullHouse()) {
+      System.out.println("Full House - Stay");
+      return;
+    }
+    else if(aiHand.hasFlush()) {
+      System.out.println("Flush - Stay");
+      return;
+    }
+    else if(aiHand.hasStraight()) {
+      System.out.println("Straight - Stay");
+      return;
+    }
+    else {
       return;
     }
   }

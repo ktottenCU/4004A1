@@ -98,7 +98,68 @@ public class PokerGame {
       }
       //Not one-away
       else {
-        
+        //two-away sets
+        if(false) {
+
+        }
+        //Not 2-away from majours
+        else {
+          //2-pair
+          if(this.aiHand.hasTwoPair()) {
+            //Find which card
+            int[] values = this.aiHand.sortHand();
+            int val = -1;
+            if(values[0] == values[1] && values[2] == values[3]) {
+              //Get value at 4
+              val = values[4];
+            }
+            else if(values[1] == values[2] && values[3] == values[4]) {
+              //Get value at 0
+              val = values[0];
+            }
+            else if(values[0] == values[1] && values[3] == values[4]) {
+              //get value at 2
+              val = values[2];
+            } 
+            //dealing with face cards and 10
+            char card;
+            if(val == 14) {
+              card = 'A';
+            }
+            else if(val == 13) {
+              card = 'K';
+            }
+            else if(val == 12) {
+              card = 'Q';
+            }
+            else if(val == 11) {
+              card = 'J';
+            }
+            else if(val == 10){
+              card = '1';
+            }
+            else {
+              card = (char) val;
+            }
+            
+            //find which card to swap, and swap it
+            int i = 0;
+            while(i < 5) {
+              if(aiHand.hand.get(i).charAt(1) == card) {
+                aiHand.removeCard(aiHand.hand.get(i));
+                aiHand.addCard(deck.get(0));
+                deck.remove(0);
+                i = 5;
+              }
+              i++;
+            }
+            
+          }
+          //Not 2-pair
+          else {
+
+          }
+        }
       }
       
       return;

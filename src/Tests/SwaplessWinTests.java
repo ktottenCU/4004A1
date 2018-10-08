@@ -46,26 +46,56 @@ public class SwaplessWinTests {
   }
   
   @Test
-  public void StraightOverThreeKind() {
+  public void straightOverThreeKind() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 17);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
   
   @Test
-  public void StraightOverTwoPair() {
+  public void straightOverTwoPair() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 18);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
   
   @Test
-  public void StraightOverPair() {
+  public void straightOverPair() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 19);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
   
   @Test
-  public void StraightOverHigh() {
+  public void straightOverHigh() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 20);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void flushOverStraight() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 21);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void flushOverThreeKind() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 22);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void flushOverTwoPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 23);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void flushOverPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 24);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void flushOverHigh() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 25);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
 }

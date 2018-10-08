@@ -8,18 +8,15 @@ package Tests;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+  SwaplessWinTests.class,
+  SwappedWinTests.class
+})
 
 public class WinTests {
-  
-  @Test
-  public void testAipWin(){
-    //Tests to make sure AI swaps cards properly
-    fail();
-  }
-  
-  @Test
-  public void testOpponentWin(){
-    //Tests to make sure AI swaps cards properly
-    fail();
-  }
+
 }

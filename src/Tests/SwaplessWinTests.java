@@ -9,9 +9,9 @@ import Poker.PokerGame;
 
 public class SwaplessWinTests {
 
-  
   @Test
-  public void defaultTest() {
-    fail();
+  public void pairOverHigh() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 11);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
 }

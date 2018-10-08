@@ -235,8 +235,18 @@ public class CardHand {
   //PAIR
   public boolean hasPair() {
     int[] check = this.sortHand();
-    if(check[0] == check[1] || check[1] == check[2] || check[2] == check[3] || check[3] == check[4]) {
-      return true;
+    //Ensuring not 3 of a kind
+    if((check[0] == check[1] && check[0] != check[2] && check[1] != check[2] && check[0] != check[3] && check[1] != check[3] && check[0] != check[4] && check[1] != check[4])
+        || (check[1] == check[2] && check[2] != check[0] && check[1] != check[0] && check[2] != check[3] && check[1] != check[3] && check[2] != check[4] && check[1] != check[4]) 
+            || (check[2] == check[3] && check[2] != check[0] && check[3] != check[0] && check[2] != check[1] && check[3] != check[1] && check[2] != check[4] && check[3] != check[4]) 
+                || (check[3] == check[4] && check[3] != check[0] && check[4] != check[0] && check[3] != check[1] && check[4] != check[1] && check[3] != check[2] && check[4] != check[2])) {
+      //Ensuring no two-pair
+      if(this.hasTwoPair()) {
+        return false;
+      }
+      else {
+        return true;
+      }
     }
     else {
       return false;
@@ -316,8 +326,10 @@ public class CardHand {
   
   //Returns a value based on what the hand contains (does not take suit or high-card value into account)
   public int handVal() {
-
-    if(this.hasPair()) {
+    if(this.hasTwoPair()) {
+      return 3;
+    }
+    else if(this.hasPair()) {
       return 2;
     }
     else {

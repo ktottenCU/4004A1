@@ -9,6 +9,8 @@ import Poker.PokerGame;
 
 public class SwaplessWinTests {
 
+  //AIP loses all games due to no swap and cardfile setup
+  
   @Test
   public void pairOverHigh() {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 11);
@@ -177,4 +179,51 @@ public class SwaplessWinTests {
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
   
+  @Test
+  public void straightFlushOverFourKind() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 39);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverFullHouse() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 40);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverFlush() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 41);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverStraight() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 42);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverThreeKind() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 43);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverTwoPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 44);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 45);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void straightFlushOverHigh() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 46);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
 }

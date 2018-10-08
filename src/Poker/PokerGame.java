@@ -251,6 +251,7 @@ public class PokerGame {
     //Opponent Wins
     else if (opp > aip) {
       System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+      System.out.println(opp);
       winner = opponentHand;
     }
     //Both hands contain the same-valued hand, so now check suits and high-card values here

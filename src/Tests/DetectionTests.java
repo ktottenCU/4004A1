@@ -138,8 +138,8 @@ public class DetectionTests {
   
   @Test
   public void pairTest() {
-    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 6);
-    assertEquals(testGame.aiHand.hasPair(), true);
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 11);
+    assertEquals(testGame.opponentHand.hasPair(), true);
   }
   
   //Independence Tests for hands

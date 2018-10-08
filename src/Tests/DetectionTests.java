@@ -126,7 +126,7 @@ public class DetectionTests {
   
   @Test
   public void threeKindTest() {
-    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 3);
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 10);
     assertEquals(testGame.aiHand.hasThreeKind(), true);
   }
   

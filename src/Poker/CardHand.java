@@ -201,13 +201,13 @@ public class CardHand {
   //THREE OF A KIND
   public boolean hasThreeKind() {
     int check[] = this.sortHand();
-    if(check[0] == check[1] && check[0] == check[2]) {
+    if(check[0] == check[1] && check[0] == check[2] && check[0] != check[3] && check[0] != check[4]) {
       return true;
     }
-    else if(check[1] == check[2] && check[1] == check[3]) {
+    else if(check[1] == check[2] && check[1] == check[3] && check[1] != check[0] && check[1] != check[4]) {
       return true;
     }
-    else if(check[2] == check[3] && check[2] == check[4]) {
+    else if(check[2] == check[3] && check[2] == check[4] && check[2] != check[0] && check[2] != check[1]) {
       return true;
     }
     else {

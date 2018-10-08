@@ -99,8 +99,76 @@ public class PokerGame {
       //Not one-away
       else {
         //two-away sets
+        //3 same suit
         if(false) {
 
+        }
+        //3 OF A KIND
+        else if (aiHand.hasThreeKind()) {
+          int check[] = aiHand.sortHand();
+          int[] val = new int[2];
+          char[] card = new char[2];
+          //first 3
+          if(check[0] == check[1] && check[0] == check[2]) {
+            val[0] = check[3]; 
+            val[1] = check[4];
+          }
+          //Middle 3
+          else if(check[1] == check[2] && check[1] == check[3]) {
+            val[0] = check[0]; 
+            val[1] = check[4];
+          }
+          //last 3
+          else{
+            val[0] = check[0]; 
+            val[1] = check[1];
+          }
+          
+          int i = 0;
+          while(i<2) {
+            if(val[i] == 14) {
+              card[i] = 'A';
+            }
+            else if(val[i] == 13) {
+              card[i] = 'K';
+            }
+            else if(val[i] == 12) {
+              card[i] = 'Q';
+            }
+            else if(val[i] == 11) {
+              card[i] = 'J';
+            }
+            else if(val[i] == 10){
+              card[i] = '1';
+            }
+            else {
+              
+              card[i] = Character.forDigit(val[i], 10);
+            }
+            i++;
+          }
+          //Found cards, now remove them
+          
+          int k = 0;
+          while(k<2) {
+            int j = 0;
+            while(j < 5) {
+              if(aiHand.hand.get(j).charAt(1) == card[k]) {
+                aiHand.removeCard(aiHand.hand.get(j));
+                aiHand.addCard(deck.get(0));
+                deck.remove(0);
+              }
+              j++;
+            }
+            k++;
+          }
+          System.out.println("AIP'S CARDS: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+
+          
+        }
+        //3 in-sequence
+        else if (false) {
+          
         }
         //Not 2-away from majours
         else {
@@ -139,7 +207,7 @@ public class PokerGame {
               card = '1';
             }
             else {
-              card = (char) val;
+              card = Character.forDigit(val, 10);
             }
             
             //find which card to swap, and swap it
@@ -153,7 +221,6 @@ public class PokerGame {
               }
               i++;
             }
-            
           }
           //Not 2-pair
           else {
@@ -161,7 +228,6 @@ public class PokerGame {
           }
         }
       }
-      
       return;
     }
   }

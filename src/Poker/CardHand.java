@@ -202,12 +202,21 @@ public class CardHand {
   public boolean hasThreeKind() {
     int check[] = this.sortHand();
     if(check[0] == check[1] && check[0] == check[2] && check[0] != check[3] && check[0] != check[4]) {
+      if(this.hasFullHouse()) {
+        return false;
+      }
       return true;
     }
     else if(check[1] == check[2] && check[1] == check[3] && check[1] != check[0] && check[1] != check[4]) {
+      if(this.hasFullHouse()) {
+        return false;
+      }
       return true;
     }
     else if(check[2] == check[3] && check[2] == check[4] && check[2] != check[0] && check[2] != check[1]) {
+      if(this.hasFullHouse()) {
+        return false;
+      }
       return true;
     }
     else {
@@ -326,7 +335,10 @@ public class CardHand {
   
   //Returns a value based on what the hand contains (does not take suit or high-card value into account)
   public int handVal() {
-    if(this.hasFlush()) {
+    if(this.hasFullHouse()) {
+      return 7;
+    }
+    else if(this.hasFlush()) {
       return 6;
     }
     else if(this.hasStraight()) {

@@ -202,19 +202,19 @@ public class CardHand {
   public boolean hasThreeKind() {
     int check[] = this.sortHand();
     if(check[0] == check[1] && check[0] == check[2] && check[0] != check[3] && check[0] != check[4]) {
-      if(this.hasFullHouse()) {
+      if(this.hasFullHouse() || this.hasFourOfAKind()) {
         return false;
       }
       return true;
     }
     else if(check[1] == check[2] && check[1] == check[3] && check[1] != check[0] && check[1] != check[4]) {
-      if(this.hasFullHouse()) {
+      if(this.hasFullHouse() || this.hasFourOfAKind()) {
         return false;
       }
       return true;
     }
     else if(check[2] == check[3] && check[2] == check[4] && check[2] != check[0] && check[2] != check[1]) {
-      if(this.hasFullHouse()) {
+      if(this.hasFullHouse() || this.hasFourOfAKind()) {
         return false;
       }
       return true;
@@ -227,13 +227,13 @@ public class CardHand {
   //TWO PAIR
   public boolean hasTwoPair() {
     int[] check = this.sortHand();
-    if(check[0] == check[1] && check[2] == check[3]) {
+    if(check[0] == check[1] && check[2] == check[3] && check[0] != check[2]) {
       return true;
     }
-    else if(check[1] == check[2] && check[3] == check[4]) {
+    else if(check[1] == check[2] && check[3] == check[4] && check[1] != check[3]) {
       return true;
     }
-    else if(check[0] == check[1] && check[3] == check[4]) {
+    else if(check[0] == check[1] && check[3] == check[4] && check[0] != check[3]) {
       return true;
     }
     else {
@@ -335,7 +335,10 @@ public class CardHand {
   
   //Returns a value based on what the hand contains (does not take suit or high-card value into account)
   public int handVal() {
-    if(this.hasFullHouse()) {
+    if(this.hasFourOfAKind()) {
+      return 8;
+    }
+    else if(this.hasFullHouse()) {
       return 7;
     }
     else if(this.hasFlush()) {

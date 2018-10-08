@@ -253,7 +253,7 @@ public class PokerGame {
       System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
       winner = opponentHand;
     }
-    //Tie, need to check suits
+    //Both hands contain the same-valued hand, so now check suits and high-card values here
     else {
       
     }

@@ -26,4 +26,22 @@ public class SwaplessWinTests {
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
   
+  @Test
+  public void threeKindOverTwoPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 14);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void threeKindOverPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 15);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void threeKindOverHigh() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 16);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
 }

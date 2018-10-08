@@ -232,4 +232,10 @@ public class PokerGame {
     }
   }
   
+  //Check Winner
+  public CardHand determineWinner() {
+    CardHand winner = new CardHand();
+    return winner;
+  }
+  
 }

@@ -326,7 +326,10 @@ public class CardHand {
   
   //Returns a value based on what the hand contains (does not take suit or high-card value into account)
   public int handVal() {
-    if(this.hasStraight()) {
+    if(this.hasFlush()) {
+      return 6;
+    }
+    else if(this.hasStraight()) {
       return 5;
     }
     else if(this.hasThreeKind()) {

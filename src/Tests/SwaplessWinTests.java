@@ -226,4 +226,58 @@ public class SwaplessWinTests {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 46);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
+  
+  @Test
+  public void royalFlushOverStraightFlush() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 47);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverFourKind() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 48);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverFullHouse() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 49);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverFlush() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 50);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverStraight() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 51);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverThreeKind() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 52);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverTwoPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 53);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverPair() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 54);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void royalFlushOverHigh() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 55);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
 }

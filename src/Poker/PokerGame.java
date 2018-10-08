@@ -235,6 +235,29 @@ public class PokerGame {
   //Check Winner
   public CardHand determineWinner() {
     CardHand winner = new CardHand();
+    //Determine winner based on an int score
+    int aip = 0;
+    int opp = 0;
+    
+    //Setting the int val for both aip and opp
+    aip = aiHand.handVal();
+    opp = opponentHand.handVal();
+    
+    //AIP wins
+    if(aip > opp) {
+      System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+      winner = aiHand;
+    }
+    //Opponent Wins
+    else if (opp > aip) {
+      System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+      winner = opponentHand;
+    }
+    //Tie, need to check suits
+    else {
+      
+    }
+    
     return winner;
   }
   

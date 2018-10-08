@@ -21,4 +21,9 @@ public class SwapTwoTests {
     testGame.processBehaviour();
     assertEquals(testGame.aiHand.hasFourOfAKind(), true);
   }
+  
+  @Test
+  public void threeSuitSwapTwoTest() {
+    fail();
+  }
 }

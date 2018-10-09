@@ -317,4 +317,10 @@ public class SwaplessWinTests {
 	PokerGame testGame = new PokerGame("src/cardfile", 61);
     assertEquals(testGame.determineWinner(), testGame.aiHand);
   }
+  
+  @Test
+  public void higherFourKind(){
+    PokerGame testGame = new PokerGame("src/cardfile", 62);
+	assertEquals(testGame.determineWinner(), testGame.opponentHand);  
+  }
 }

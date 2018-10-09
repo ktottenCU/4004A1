@@ -280,4 +280,30 @@ public class SwaplessWinTests {
     PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 55);
     assertEquals(testGame.determineWinner(), testGame.opponentHand);
   }
+  
+  //Complex Wins here. This is where suit and highcard matters
+  @Test
+  public void spadeRFvsHeartRF() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 56);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void heartRFvsDiamondRF() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 57);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void diamondRFvsClubRF() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 58);
+    assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void spadeRFvsClubRF() {
+    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 59);
+    assertEquals(testGame.determineWinner(), testGame.aiHand);
+  }
+  
 }

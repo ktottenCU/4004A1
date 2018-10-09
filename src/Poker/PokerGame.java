@@ -338,6 +338,36 @@ public class PokerGame {
           winner = aiHand;
     	}	
       }
+//----- FULL HOUSE -----//
+      else if(aip == 7){
+    	int[] aipvals, oppvals;
+      	aipvals = aiHand.sortHand();
+      	oppvals = opponentHand.sortHand();
+      	int highopp, highaip;
+      	//Finding which of the 5 cards is the triple
+      	if(aipvals[0] == aipvals[1] && aipvals[0] == aipvals[2]){
+      	  highaip = aipvals[0];
+      	}
+      	else{
+      	  highaip = aipvals[4];
+      	}
+      	if(oppvals[0] == oppvals[1] && oppvals[0] == oppvals[2]){
+          highopp = oppvals[0];
+        }
+        else{
+          highopp = oppvals[4];
+        }
+      	//Get the winner
+      	if(highopp > highaip){
+      	  System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+          winner = opponentHand;
+      	}
+      	else{
+      	  System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+          winner = aiHand;
+      	}
+      	
+      }
       //Not Royal Flush
       else {
         

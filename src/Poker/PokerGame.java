@@ -385,11 +385,11 @@ public class PokerGame {
       	//Checking if same or not
       	if(highopp > highaip){
       	  System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
-            winner = opponentHand;
+          winner = opponentHand;
       	}
       	else if (highaip > highopp){
       	  System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
-            winner = aiHand;
+          winner = aiHand;
       	}
       	//Same high card
       	else{
@@ -417,9 +417,26 @@ public class PokerGame {
       	  //Opponent
       	}
       }
-      //Not Royal Flush
+//----- HIGH CARD -----//
       else {
-        
+        int[] aipvals, oppvals;
+        int highaip, highopp;
+        aipvals = aiHand.sortHand();
+        oppvals = opponentHand.sortHand();
+        highaip = aipvals[4];
+        highopp = oppvals[4];
+        if(highopp > highaip){
+          System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+          winner = opponentHand;
+        }
+        else if (highaip > highopp){
+          System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+          winner = aiHand;	
+        }
+        //Same Card, Check Suit
+        else{
+          
+        }
       }
     }
     return winner;

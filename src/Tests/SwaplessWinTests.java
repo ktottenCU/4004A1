@@ -341,4 +341,16 @@ public class SwaplessWinTests {
     PokerGame testGame = new PokerGame("src/cardfile", 65);
 	assertEquals(testGame.determineWinner(), testGame.opponentHand);  
   }
+  
+  @Test
+  public void highestCard(){
+    PokerGame testGame = new PokerGame("src/cardfile", 66);
+	assertEquals(testGame.determineWinner(), testGame.opponentHand);  
+  }
+  
+  @Test
+  public void highestCardSuit(){
+    PokerGame testGame = new PokerGame("src/cardfile", 67);
+	assertEquals(testGame.determineWinner(), testGame.opponentHand);  
+  }
 }

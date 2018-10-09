@@ -251,14 +251,28 @@ public class PokerGame {
     //Opponent Wins
     else if (opp > aip) {
       System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
-      System.out.println(opp);
       winner = opponentHand;
     }
     //Both hands contain the same-valued hand, so now check suits and high-card values here
     else {
-      
+      //Royal Flush Comparison
+      if(aip == 10) {
+        int aipval = aiHand.sortSuits()[0];
+        int oppval = opponentHand.sortSuits()[0];
+        if(aipval>oppval) {
+          System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+          winner = aiHand;
+        }
+        else {
+          System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+          winner = opponentHand;
+        }
+      }
+      //Not Royal Flush
+      else {
+        
+      }
     }
-    
     return winner;
   }
   

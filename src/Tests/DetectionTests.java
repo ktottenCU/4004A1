@@ -182,4 +182,11 @@ public class DetectionTests {
     assertEquals(testGame.aiHand.hasThreeSuit(), true);
   }
   
+  @Test
+  public void oneOffRoyalTest(){
+	PokerGame testGame = new PokerGame("src/cardfile", 65);
+	int val = testGame.aiHand.oneOffRoyalFlush();
+    assertEquals(val >= 0, true);
+  }
+  
 }

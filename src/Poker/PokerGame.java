@@ -50,27 +50,27 @@ public class PokerGame {
 	//If structure to check if hand contains certain stuff
     if(aiHand.hasRoyalFlush()) {
       //Royal Flush
-      System.out.println("Royal Flush - Stay");
+      System.out.println("AIP Has: Royal Flush - Stay");
       return;
     }
     else if(aiHand.hasStraightFlush()) {
-      System.out.println("Straight Flush - Stay");
+      System.out.println("AIP Has: Straight Flush - Stay");
       return;
     }
     else if(aiHand.hasFourOfAKind()) {
-      System.out.println("Four of a Kind - Stay");
+      System.out.println("AIP Has: Four of a Kind - Stay");
       return;
     }
     else if(aiHand.hasFullHouse()) {
-      System.out.println("Full House - Stay");
+      System.out.println("AIP Has: Full House - Stay");
       return;
     }
     else if(aiHand.hasFlush()) {
-      System.out.println("Flush - Stay");
+      System.out.println("AIP Has: Flush - Stay");
       return;
     }
     else if(aiHand.hasStraight()) {
-      System.out.println("Straight - Stay");
+      System.out.println("AIP Has: Straight - Stay");
       return;
     }
     //None of the majour hands
@@ -87,7 +87,10 @@ public class PokerGame {
       }
       //Flush
       else if(aiHand.oneOffFlush() != (-1)) {
-        aiHand.removeCard(aiHand.hand.get(aiHand.oneOffFlush()));
+        int val = aiHand.oneOffFlush();
+        System.out.println("AIP Swapping: " + aiHand.hand.get(val));
+        aiHand.removeCard(aiHand.hand.get(val));
+        System.out.print(" for " + deck.get(0));
         aiHand.addCard(deck.get(0));
         deck.remove(0);
       }
@@ -153,7 +156,9 @@ public class PokerGame {
             int j = 0;
             while(j < 5) {
               if(aiHand.hand.get(j).charAt(1) == card[k]) {
+                System.out.println("AIP Swapping: " + aiHand.hand.get(j));
                 aiHand.removeCard(aiHand.hand.get(j));
+                System.out.print(" for " + deck.get(0));
                 aiHand.addCard(deck.get(0));
                 deck.remove(0);
               }
@@ -213,7 +218,9 @@ public class PokerGame {
             int i = 0;
             while(i < 5) {
               if(aiHand.hand.get(i).charAt(1) == card) {
+                System.out.println("AIP Swapping: " + aiHand.hand.get(i));
                 aiHand.removeCard(aiHand.hand.get(i));
+                System.out.print(" for " + deck.get(0));
                 aiHand.addCard(deck.get(0));
                 deck.remove(0);
                 i = 5;

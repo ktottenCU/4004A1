@@ -24,7 +24,7 @@ public class InitialTests{
     Parser parse = new Parser();
     ArrayList<ArrayList<String>> cards;
     try {
-      cards = parse.getCards("C:/Users/ktotten/workspace/4004A1/src/cardfile");
+      cards = parse.getCards("src/cardfile");
       assertEquals(cards.get(0).size(), 52);
       assertEquals(cards.get(1).size(), 52);
     } 
@@ -36,7 +36,7 @@ public class InitialTests{
   @Test
   public void testInitialCards() {
     //Tests to make sure proper cards grabbed for AI and Player hands
-    PokerGame testGame = new PokerGame("C:/Users/ktotten/workspace/4004A1/src/cardfile", 0);
+    PokerGame testGame = new PokerGame("src/cardfile", 0);
     assertEquals(testGame.opponentHand.hand.size(), 5);
     assertEquals(testGame.aiHand.hand.size(), 5);
     assertEquals(testGame.opponentHand.hand.get(0), "SA");

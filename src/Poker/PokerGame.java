@@ -88,9 +88,8 @@ public class PokerGame {
       //Flush
       else if(aiHand.oneOffFlush() != (-1)) {
         int val = aiHand.oneOffFlush();
-        System.out.println("AIP Swapping: " + aiHand.hand.get(val));
+        System.out.println("AIP Swapping: " + aiHand.hand.get(val) + " for " + deck.get(0));
         aiHand.removeCard(aiHand.hand.get(val));
-        System.out.print(" for " + deck.get(0));
         aiHand.addCard(deck.get(0));
         deck.remove(0);
       }
@@ -156,9 +155,8 @@ public class PokerGame {
             int j = 0;
             while(j < 5) {
               if(aiHand.hand.get(j).charAt(1) == card[k]) {
-                System.out.println("AIP Swapping: " + aiHand.hand.get(j));
+                System.out.println("AIP Swapping: " + aiHand.hand.get(j) + " for " + deck.get(0));
                 aiHand.removeCard(aiHand.hand.get(j));
-                System.out.print(" for " + deck.get(0));
                 aiHand.addCard(deck.get(0));
                 deck.remove(0);
               }
@@ -218,9 +216,8 @@ public class PokerGame {
             int i = 0;
             while(i < 5) {
               if(aiHand.hand.get(i).charAt(1) == card) {
-                System.out.println("AIP Swapping: " + aiHand.hand.get(i));
+                System.out.println("AIP Swapping: " + aiHand.hand.get(i) + " for " + deck.get(0));
                 aiHand.removeCard(aiHand.hand.get(i));
-                System.out.print(" for " + deck.get(0));
                 aiHand.addCard(deck.get(0));
                 deck.remove(0);
                 i = 5;

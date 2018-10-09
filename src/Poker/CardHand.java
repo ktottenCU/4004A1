@@ -333,6 +333,10 @@ public class CardHand {
     return (-1);
   }
   
+  public boolean hasThreeSuit(){
+	  return false;
+  }
+  
   //Returns a value based on what the hand contains (does not take suit or high-card value into account)
   public int handVal() {
     if(this.hasRoyalFlush()) {

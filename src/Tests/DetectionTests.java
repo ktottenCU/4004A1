@@ -174,10 +174,12 @@ public class DetectionTests {
     assertEquals(testGame.aiHand.hasFourOfAKind(), true);
   }
   
+  //Part Hand Tests
+  
   @Test
   public void threeSuitTest() {
-    PokerGame testGame = new PokerGame("src/cardfile", 10);
-    fail();
+    PokerGame testGame = new PokerGame("src/cardfile", 65);
+    assertEquals(testGame.aiHand.hasThreeSuit(), true);
   }
   
 }

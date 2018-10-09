@@ -387,9 +387,34 @@ public class PokerGame {
       	  System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
             winner = opponentHand;
       	}
-      	else {
+      	else if (highaip > highopp){
       	  System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
             winner = aiHand;
+      	}
+      	//Same high card
+      	else{
+      	  //Get suit of AIP and Opp based on highest card value
+          //AIP first
+      	  
+      	  if(aip == 14){
+      	  
+      	  }
+      	  else if(aip == 13){
+      		  
+      	  }
+      	  else if(aip == 12){
+      		  
+      	  }
+      	  else if(aip == 11){
+      		  
+      	  }
+      	  else if(aip == 10){
+      		  
+      	  }
+      	  else{
+      		  
+      	  }
+      	  //Opponent
       	}
       }
       //Not Royal Flush

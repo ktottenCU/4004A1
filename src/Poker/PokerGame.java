@@ -366,7 +366,31 @@ public class PokerGame {
       	  System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
           winner = aiHand;
       	}
-      	
+      }
+      else if(aip == 5){
+    	//Check high card
+      	int[] aipvals, oppvals;
+      	int highaip, highopp;
+      	aipvals = aiHand.sortHand();
+      	oppvals = opponentHand.sortHand();
+      	highaip = aipvals[4];
+      	highopp = oppvals[4];
+      	//checking ace
+      	if(highaip == 14){
+      	  highaip = aipvals[3];
+      	}
+      	if(highopp == 14){
+      	  highopp = oppvals[3];
+      	}
+      	//Checking if same or not
+      	if(highopp > highaip){
+      	  System.out.println("WINNER: OPPONENT! The cards are: " + this.opponentHand.hand.get(0) + ", " + this.opponentHand.hand.get(1) + ", " + this.opponentHand.hand.get(2) + ", " + this.opponentHand.hand.get(3) + ", " + this.opponentHand.hand.get(4));
+            winner = opponentHand;
+      	}
+      	else {
+      	  System.out.println("WINNER: AIP! The cards are: " + this.aiHand.hand.get(0) + ", " + this.aiHand.hand.get(1) + ", " + this.aiHand.hand.get(2) + ", " + this.aiHand.hand.get(3) + ", " + this.aiHand.hand.get(4));
+            winner = aiHand;
+      	}
       }
       //Not Royal Flush
       else {

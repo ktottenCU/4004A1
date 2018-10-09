@@ -306,4 +306,15 @@ public class SwaplessWinTests {
     assertEquals(testGame.determineWinner(), testGame.aiHand);
   }
   
+  @Test
+  public void spadeSFvsHeartSF(){
+    PokerGame testGame = new PokerGame("src/cardfile", 60);
+	assertEquals(testGame.determineWinner(), testGame.opponentHand);
+  }
+  
+  @Test
+  public void spadeSFvsHigherSF(){
+	PokerGame testGame = new PokerGame("src/cardfile", 61);
+    assertEquals(testGame.determineWinner(), testGame.aiHand);
+  }
 }

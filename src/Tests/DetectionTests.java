@@ -184,7 +184,7 @@ public class DetectionTests {
   
   @Test
   public void oneOffRoyalTest(){
-	PokerGame testGame = new PokerGame("src/cardfile", 65);
+	PokerGame testGame = new PokerGame("src/cardfile", 66);
 	int val = testGame.aiHand.oneOffRoyalFlush();
     assertEquals(val >= 0, true);
   }

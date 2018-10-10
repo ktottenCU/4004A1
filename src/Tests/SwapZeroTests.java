@@ -18,7 +18,7 @@ public class SwapZeroTests {
   
   @Test
   public void RoyalFlushTest() {
-    PokerGame testGame = new PokerGame("src/cardfile", 1);
+    PokerGame testGame = new PokerGame("src/cardfile", 56);
     CardHand pre = testGame.aiHand;
     testGame.processBehaviour();
     CardHand post = testGame.aiHand;
@@ -27,7 +27,7 @@ public class SwapZeroTests {
   
   @Test
   public void straightFlushTest() {
-    PokerGame testGame = new PokerGame("src/cardfile", 1);
+    PokerGame testGame = new PokerGame("src/cardfile", 47);
     CardHand pre = testGame.aiHand;
     testGame.processBehaviour();
     CardHand post = testGame.aiHand;
@@ -54,7 +54,7 @@ public class SwapZeroTests {
   
   @Test
   public void flushTest() {
-    PokerGame testGame = new PokerGame("src/cardfile", 1);
+    PokerGame testGame = new PokerGame("src/cardfile", 41);
     CardHand pre = testGame.aiHand;
     testGame.processBehaviour();
     CardHand post = testGame.aiHand;
@@ -63,7 +63,7 @@ public class SwapZeroTests {
   
   @Test
   public void straightTest() {
-    PokerGame testGame = new PokerGame("src/cardfile", 1);
+    PokerGame testGame = new PokerGame("src/cardfile", 42);
     CardHand pre = testGame.aiHand;
     testGame.processBehaviour();
     CardHand post = testGame.aiHand;

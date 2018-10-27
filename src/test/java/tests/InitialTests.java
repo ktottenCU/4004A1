@@ -1,3 +1,4 @@
+package tests;
 
 ////////////////////
 //
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import org.junit.*;
 
 import junit.*;
+import poker.Parser;
+import poker.PokerGame;
 
 //Class for all the tests
 public class InitialTests{

@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //Tests for Swapping 0 Cards
@@ -10,8 +10,8 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import Poker.CardHand;
-import Poker.PokerGame;
+import main.CardHand;
+import main.PokerGame;
 
 public class SwapZeroTests {
   //Detecting Royal Flush, Straight Flush, Four of a Kind, Full House, Flush and Straight

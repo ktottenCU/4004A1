@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //Test for the AI behaviour and card swapping
@@ -13,7 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import Poker.PokerGame;
+import main.PokerGame;
 
   @RunWith(Suite.class)
   @Suite.SuiteClasses({

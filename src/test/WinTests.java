@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //The Tests for who wins

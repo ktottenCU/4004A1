@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //Tests to see if card hands detect what they have
@@ -10,7 +10,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import Poker.PokerGame;
+import main.PokerGame;
 
 public class DetectionTests {
 

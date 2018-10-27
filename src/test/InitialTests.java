@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //Tests for Initial State
@@ -12,8 +12,10 @@ import java.util.ArrayList;
 
 import org.junit.*;
 
-import Poker.*;
+
 import junit.*;
+import main.Parser;
+import main.PokerGame;
 
 //Class for all the tests
 public class InitialTests{

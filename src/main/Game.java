@@ -1,4 +1,4 @@
-package Poker;
+package main;
 
 import javax.swing.JOptionPane;
 

@@ -4,5 +4,12 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-core-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-html-0.2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/cucumber-spring-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ktotten/Desktop/Cucumber Jars/gherkin-2.9.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

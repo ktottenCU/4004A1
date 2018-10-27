@@ -1,4 +1,4 @@
-package Tests;
+package test;
 ////////////////////
 //
 //Tests for Swapping 1 card
@@ -10,7 +10,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import Poker.PokerGame;
+import main.PokerGame;
 
 public class SwapOneTests {
 

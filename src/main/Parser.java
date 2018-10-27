@@ -1,4 +1,4 @@
-package Poker;
+package main;
 ////////////////////
 //
 //Class for the Parser. Brings in the cards from the file

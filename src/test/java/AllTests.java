@@ -1,4 +1,4 @@
-package test;
+
 ////////////////////
 //
 //Runs all the tests

@@ -1,4 +1,4 @@
-package test;
+
 ////////////////////
 //
 //Tests for Swapping 3 cards
